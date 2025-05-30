@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>My Personal Portfolio</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #222;
+    line-height: 1.5;
+    background: #fafafa;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: #005fa3;
+    outline: none;
+  }
+  h1, h2, h3 {
+    font-weight: 700;
+  }
+
+  /* Navbar */
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1a202c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    user-select: none;
+  }
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0 15px;
+    margin: 0;
+    max-width: 900px;
+    width: 100%;
+    align-items: center;
+    height: 52px;
+  }
+  #navbar li {
+    margin: 0 15px;
+  }
+  #navbar a {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 52px;
+    display: inline-block;
+  }
+  #navbar a:hover,
+  #navbar a:focus {
+    color: #63b3ed;
+  }
+
+  
+  #navbar a {
+    padding: 8px 4px;
+  }
+
+  /* Welcome Section */
+  #welcome-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+  }
+  #welcome-section h1 {
+    font-size: 3rem;
+    max-width: 650px;
+  }
+
+  /* Projects Section */
+  #projects {
+    background: white;
+    padding: 60px 20px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  #projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #2d3748;
+    font-weight: 700;
+  }
+
+  .project-tile {
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-tile:hover,
+  .project-tile:focus-within {
+    box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+    border-color: #667eea;
+  }
+  .project-tile h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #2d3748;
+  }
+  .project-tile p {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+  }
+  .project-tile a {
+    align-self: flex-start;
+    color: #667eea;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .project-tile a:hover,
+  .project-tile a:focus {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a202c;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  footer a#profile-link {
+    color: #63b3ed;
+  }
+  footer a#profile-link:hover,
+  footer a#profile-link:focus {
+    text-decoration: underline;
+  }
+
+  /* Media Queries */
+  @media (max-width: 600px) {
+    #navbar ul {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+    }
+    #navbar li {
+      margin: 8px 0;
+    }
+    #welcome-section h1 {
+      font-size: 2rem;
+    }
+    #projects {
+      padding: 40px 15px 60px;
+    }
+    .project-tile {
+      padding: 18px 20px;
+    }
+  }
+  @media (max-height: 600px) {
+    #welcome-section {
+      height: 600px;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav id="navbar" role="navigation">
+    <ul>
+      <li><a href="#welcome-section" tabindex="0">Home</a></li>
+      <li><a href="#projects" tabindex="0">Projects</a></li>
+      <li><a href="#contact" tabindex="0">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="welcome-section" tabindex="0" aria-label="Welcome section">
+    <h1>Hello, I'm Your Name — A Passionate Web Developer</h1>
+  </section>
+
+  <section id="projects" tabindex="0" aria-label="Projects section">
+    <h2>Projects</h2>
+
+    <article class="project-tile" tabindex="0" role="article" aria-labelledby="proj1-title">
+      <h3 id="proj1-title">Build a Weather App</h3>
+      <p>A responsive weather app that shows real-time weather data using an API and geolocation.</p>
+      <a href="https://github.com/yourusername/weather-app" target="_blank" rel="noopener noreferrer" aria-label="View Weather App project on GitHub">View Project</a>
+    </article>
+
+    <article class="project-tile" tabindex="0" role="article" aria-labelledby="proj2-title">
+      <h3 id="proj2-title">Portfolio Website</h3>
+      <p>A personal portfolio site showcasing projects and skills with a modern responsive design.</p>
+      <a href="https://https://github.com/izzah488/individu_assignment_CSC578" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio Website project">View Project</a>
+    </article>
+
+    <article class="project-tile" tabindex="0" role="article" aria-labelledby="proj3-title">
+      <h3 id="proj3-title">Task Manager App</h3>
+      <p>A task management app built with JavaScript to add, remove, and filter tasks easily.</p>
+      <a href="https://github.com/yourusername/task-manager" target="_blank" rel="noopener noreferrer" aria-label="View Task Manager App project on GitHub">View Project</a>
+    </article>
+  </section>
+
+  <section id="contact" tabindex="0" aria-label="Contact section" style="max-width: 900px; margin: 0 auto 80px; padding: 0 20px;">
+    <h2>Contact</h2>
+    <p>You can reach me via email: <a href="mailto:izzah.email@example.com">your.email@example.com</a></p>
+  </section>
+
+  <footer>
+    <a id="profile-link" href="https://github.com/izzahname" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile in new tab">My GitHub Profile</a>
+  </footer>
+
+  <script>
+    // Smooth scroll for all anchor links with hash
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          // Move focus for accessibility
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
