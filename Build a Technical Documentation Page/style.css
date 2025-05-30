@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #eaeaea; /* Light background for better contrast */
+}
+
+#navbar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#navbar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Darker color for better readability */
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar .nav-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#navbar .nav-link:hover {
+    background-color: #ddd; /* Highlight on hover */
+}
+
+#main-doc {
+    margin-left: 260px; /* Space for the navbar */
+    padding: 20px;
+    flex-grow: 1; /* Allow main content to grow */
+    background-color: #fff; /* White background for main content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.main-section {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.main-section header {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007BFF; /* Bootstrap primary color */
+}
+
+.main-section article {
+    line-height: 1.6; /* Improved readability */
+}
+
+code {
+    background-color: #f4f4f4; /* Light background for code */
+    padding: 2px 4px;
+    border-radius: 4px; /* Rounded corners for code */
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue; /* Changes background color on small screens */
+    }
+    #navbar {
+        width: 100%; /* Makes the navbar full width on small screens */
+        position: relative; /* Change position for mobile */
+        height: auto; /* Adjust height */
+    }
+    #main-doc {
+        margin-left: 0; /* Removes left margin on small screens */
+        padding: 10px; /* Adjust padding */
+    }
+}
