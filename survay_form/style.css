@@ -1,0 +1,21 @@
+h1{
+    text-align:center;
+  }
+  p{
+    text-align:center;
+  }
+  form, .header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between elements */
+     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+  }
+  body {
+    background-color: #e0f7fa; /* light grey-blue */
+    font-family: Arial, sans-serif;
+  }
+  
